@@ -1,0 +1,23 @@
+{
+  "name": "mysql-http-proxy",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/main.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "dotenv": "^16.0.0",
+    "mysql": "^2.18.1",
+    "polka": "^0.5.2"
+  },
+  "devDependencies": {
+    "@types/mysql": "^2.15.21",
+    "@types/polka": "^0.5.4",
+    "typescript": "^4.6.2"
+  },
+  "volta": {
+    "node": "17.7.1"
+  }
+}
