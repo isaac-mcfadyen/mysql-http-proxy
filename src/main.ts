@@ -27,8 +27,14 @@ polka()
       return;
     }
 
-    // Run the query on the DB.
-    const response = await queryDb(query);
+    let response: any = [];
+    try {
+      // Run the query on the DB.
+      response = await queryDb(query);
+    } catch (e: any) {
+      console.log(e);
+      response = { error: e.message };
+    }
 
     // Return the response.
     res.writeHead(200, { "Content-Type": "application/json" });
