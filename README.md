@@ -2,7 +2,7 @@
 A simple HTTP proxy for MySQL, designed for serverless environments like Cloudflare Workers.
 
 ### 😔 The Problem
-Serverless environments such as AWS Lambda are not suited for database connections. Traditional databases such as MySQL can be easily slowed to a crawl by handling too many connections; plus, as of March 2022, Cloudflare Worker's don't even support TCP which relation databases require!
+Serverless environments such as AWS Lambda are not suited for database connections. Traditional databases such as MySQL can be easily slowed to a crawl by handling too many connections; plus, as of March 2022, Cloudflare Workers don't even support TCP which relation databases require!
 
 ### 🎉 The Solution
 Enter `mysql-http-proxy`. It sits on a server and acts as a super-simple database proxy, exposing an HTTP endpoint and ensuring only one connection is ever open to your database at once.
